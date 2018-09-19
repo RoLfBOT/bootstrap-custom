@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Pangolin|Quicksand');
 $theme-colors: (
     "primary": #00fff8,
     "dark": #242424,
@@ -6,9 +7,79 @@ $theme-colors: (
 
 $navbar-dark-toggler-border-color: rgba(0, 0, 0, 0);
 $body-bg: #2c2a2a;
+$font-family-sans-serif: 'Pangolin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 @import 'node_modules/bootstrap/scss/bootstrap';
 
+
+.navbar-side {
+    height: 100%;
+    width: 60%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    list-style: none;
+    background-color: $body-bg;
+    overflow-y: auto;
+    z-index: 1000;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: 300ms ease;
+    transition: 300ms ease;
+
+    @include media-breakpoint-up(xs) {width: 60%}
+    @include media-breakpoint-up(sm) {width: 40%}
+    @include media-breakpoint-up(md) {width: 25%}
+    @include media-breakpoint-up(lg) {width: 20%}
+
+    
+    .navbar-side-item {
+        padding: 1.5rem 0;
+        margin: 0;
+        border-bottom: 2px solid #ccc;
+        height: 5rem;
+    }
+    
+    .side-link {
+        padding-left: 2rem;
+    
+        @include hover-focus {
+            text-decoration: none;
+        }
+    }
+}
+
+.navbar-side-reveal {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: 300ms ease;
+    transition: 300ms ease;
+}
+
+.backdrop {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 990;
+}
+
 .navbar-dark .navbar-toggler-icon {
     background-image: url('./hamburger-blue.svg');
+}
+
+.navbar-dark .navbar-brand {
+    color: #00fff8;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #00fff8;
 }
