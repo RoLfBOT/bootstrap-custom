@@ -5,6 +5,7 @@ $theme-colors: (
     "light":#333131,
 );
 
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,255,248, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 $navbar-dark-toggler-border-color: rgba(0, 0, 0, 0);
 $body-bg: #2c2a2a;
 $font-family-sans-serif: 'Pangolin', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -72,9 +73,9 @@ $font-family-sans-serif: 'Pangolin', -apple-system, BlinkMacSystemFont, "Segoe U
     z-index: 990;
 }
 
-.navbar-dark .navbar-toggler-icon {
-    background-image: url('./hamburger-blue.svg');
-}
+// .navbar-dark .navbar-toggler-icon {
+//     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,255,248, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+// }
 
 .navbar-dark .navbar-brand {
     color: #00fff8;
